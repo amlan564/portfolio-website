@@ -11,18 +11,22 @@ type Props = {
 };
 
 const MobileNav = ({ showNav, closeNav }: Props) => {
+  const navOpen = showNav ? "translate-x-0" : "translate-x-[100%]";
+
   return (
     <div>
       {/* overlay */}
-      <div className="fixed inset-0 z-[1000] bg-black opacity-40 w-full h-screen"></div>
-      <div className="fixed right-0 flex flex-col pt-20 h-full w-[60%] bg-purple-200 z-[10000] space-y-6">
+      <div
+        className={`fixed ${navOpen} transform transition-all duration-500 inset-0 z-[1000] bg-black opacity-40 w-full h-screen`}
+      ></div>
+      <div className={`fixed ${navOpen} transform transition-all duration-500 delay-300 right-0 flex flex-col pt-20 h-full w-[60%] bg-purple-200 z-[10000] space-y-6`}>
         {navLinks.map((navlink) => (
           <Link key={navlink.id} href={navlink.url}>
             <p className="nav__link text-black ml-12 pb-2">{navlink.label}</p>
           </Link>
         ))}
         {/* close icon */}
-        <CgClose className="absolute top-6 right-8 w-6 h-6" />
+        <CgClose onClick={closeNav} className="absolute top-6 right-11 w-6 h-6 cursor-pointer" />
       </div>
     </div>
   );

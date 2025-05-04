@@ -1,3 +1,5 @@
+"use client";
+
 import { navLinks } from "@/constant/constant";
 import Link from "next/link";
 import React from "react";
@@ -11,7 +13,7 @@ type Props = {
 
 const Nav = ({ openNav }: Props) => {
   return (
-    <div className="fixed h-[10vh] z-10 w-full bg-gray-100">
+    <div className={`fixed h-[10vh] z-10 w-full bg-gray-100`}>
       <div className="flex items-center justify-between h-full w-[95%] sm:w-[90%] xl:w-[80%] mx-auto">
         {/* logo */}
         <h1 className="text-purple-500 text-2xl uppercase">Amlan</h1>
@@ -23,7 +25,10 @@ const Nav = ({ openNav }: Props) => {
           ))}
         </div>
         {/* hamburger icon */}
-        <HiBars3BottomRight onClick={openNav} className="w-8 h-8 text-purple-500 cursor-pointer lg:hidden" />
+        <HiBars3BottomRight
+          onClick={openNav}
+          className="w-8 h-8 text-purple-500 cursor-pointer lg:hidden"
+        />
       </div>
     </div>
   );
