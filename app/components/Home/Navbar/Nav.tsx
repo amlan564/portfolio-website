@@ -1,9 +1,32 @@
-import React from 'react'
+import { navLinks } from "@/constant/constant";
+import Link from "next/link";
+import React from "react";
+import { HiBars3BottomRight } from "react-icons/hi2";
 
-const Nav = () => {
+// define props type
+
+type Props = {
+  openNav: () => void;
+};
+
+const Nav = ({ openNav }: Props) => {
   return (
-    <div>Nav</div>
-  )
-}
+    <div className="fixed h-[10vh] z-10 w-full bg-gray-100">
+      <div className="flex items-center justify-between h-full w-[95%] sm:w-[90%] xl:w-[80%] mx-auto">
+        {/* logo */}
+        <h1 className="text-purple-500 text-2xl uppercase">Amlan</h1>
+        <div className="hidden lg:flex items-center space-x-10">
+          {navLinks.map((navlink) => (
+            <Link key={navlink.id} href={navlink.url}>
+              <p className="nav__link">{navlink.label}</p>
+            </Link>
+          ))}
+        </div>
+        {/* hamburger icon */}
+        <HiBars3BottomRight onClick={openNav} className="w-8 h-8 text-purple-500 cursor-pointer lg:hidden" />
+      </div>
+    </div>
+  );
+};
 
-export default Nav
+export default Nav;

@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@layer components {
+  .nav__link {
+    @apply relative w-fit block;
+  }
+
+  .nav__link::after {
+    @apply block content-[''] absolute h-[3px] bg-purple-500 w-full scale-x-0 transition duration-300 origin-right;
+  }
+
+  .nav__link:hover::after {
+    @apply scale-x-100 origin-right;
+  }
+}
