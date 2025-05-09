@@ -13,10 +13,10 @@ type Props = {
 
 const Nav = ({ openNav }: Props) => {
   return (
-    <div className={`fixed h-[10vh] z-10 w-full bg-gray-100`}>
-      <div className="flex items-center justify-between h-full w-[95%] sm:w-[90%] xl:w-[80%] mx-auto">
+    <div className="fixed h-[8vh] md:h-[10vh] z-10 w-full bg-gray-100">
+      <div className="flex items-center justify-between h-full w-[90%] md:w-[80%] mx-auto">
         {/* logo */}
-        <h1 className="text-purple-500 text-2xl uppercase">Amlan</h1>
+        <h1 className="text-purple-600 text-2xl uppercase">Amlan</h1>
         <div className="hidden lg:flex items-center space-x-10">
           {navLinks.map((navlink) => (
             <Link key={navlink.id} href={navlink.url}>
@@ -27,7 +27,7 @@ const Nav = ({ openNav }: Props) => {
         {/* hamburger icon */}
         <HiBars3BottomRight
           onClick={openNav}
-          className="w-8 h-8 text-purple-500 cursor-pointer lg:hidden"
+          className="w-8 h-8 text-purple-600 cursor-pointer lg:hidden"
         />
       </div>
     </div>

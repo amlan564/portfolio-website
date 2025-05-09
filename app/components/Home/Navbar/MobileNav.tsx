@@ -26,7 +26,7 @@ const MobileNav = ({ showNav, closeNav }: Props) => {
           </Link>
         ))}
         {/* close icon */}
-        <CgClose onClick={closeNav} className="absolute top-6 right-11 w-6 h-6 cursor-pointer" />
+        <CgClose onClick={closeNav} className="absolute top-3 right-8 md:top-5 md:right-22 w-6 h-6 cursor-pointer" />
       </div>
     </div>
   );
