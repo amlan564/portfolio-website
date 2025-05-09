@@ -5,7 +5,7 @@ import { MdDownload } from "react-icons/md";
 
 const Hero = () => {
   return (
-    <div className="w-full pt-[10vh] md:pt-[10vh] lg:pt-[10vh] h-screen bg-gray-100 overflow-hidden relative">
+    <div className="w-full pt-[10vh] md:pt-[10vh] lg:pt-[10vh] h-screen bg-gray-50 overflow-hidden relative">
       <div className="flex flex-col justify-center w-4/7 md:w-3/4 lg:w-5/7 xl:w-4/7 h-full mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
           {/* text content */}
