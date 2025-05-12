@@ -1,4 +1,5 @@
 import { navLinks } from "@/constant/constant";
+import { socialLinks } from "@/data/data";
 import Link from "next/link";
 import React from "react";
 import { CgClose } from "react-icons/cg";
@@ -19,14 +20,37 @@ const MobileNav = ({ showNav, closeNav }: Props) => {
       <div
         className={`fixed ${navOpen} transform transition-all duration-500 inset-0 z-[1000] bg-black opacity-40 w-full h-screen`}
       ></div>
-      <div className={`fixed ${navOpen} transform transition-all duration-500 delay-300 right-0 flex flex-col pt-20 h-full w-[60%] bg-purple-200 z-[10000] space-y-6`}>
+      {/* nav menu */}
+      <div
+        className={`fixed ${navOpen} transform transition-all duration-500 delay-300 right-0 flex flex-col pt-25 h-full w-[70%] bg-purple-200 z-[10000] space-y-6`}
+      >
         {navLinks.map((navlink) => (
           <Link key={navlink.id} href={navlink.url}>
-            <p className="nav__link text-black ml-12 pb-2">{navlink.label}</p>
+            <p className="nav__link text-sm text-black ml-10 pb-2">{navlink.label}</p>
           </Link>
         ))}
+        <div className="flex items-center gap-6 ml-10 mt-8">
+          {socialLinks.map((link) => (
+            <div
+              key={link.id}
+              className="w-8 h-8 rounded-full bg-gray-500 flex items-center justify-center cursor-pointer transition-all duration-200"
+            >
+              <a
+                href={link.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white"
+              >
+                <link.icon size={22} />
+              </a>
+            </div>
+          ))}
+        </div>
         {/* close icon */}
-        <CgClose onClick={closeNav} className="absolute top-3 right-8 md:top-5 md:right-22 w-6 h-6 cursor-pointer" />
+        <CgClose
+          onClick={closeNav}
+          className="absolute top-3 right-6 md:top-5 md:right-22 w-6 h-6 cursor-pointer"
+        />
       </div>
     </div>
   );

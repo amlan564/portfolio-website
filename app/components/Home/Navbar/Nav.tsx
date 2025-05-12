@@ -13,14 +13,14 @@ type Props = {
 
 const Nav = ({ openNav }: Props) => {
   return (
-    <div className="fixed h-[8vh] md:h-[10vh] z-10 w-full bg-gray-50">
+    <div className="fixed h-[8vh] md:h-[8vh] z-10 w-full bg-gray-50">
       <div className="flex items-center justify-between h-full w-[90%] md:w-[80%] mx-auto">
         {/* logo */}
-        <h1 className="text-purple-600 text-2xl uppercase">Amlan</h1>
+        <h1 className="text-purple-600 text-xl uppercase">Amlan</h1>
         <div className="hidden lg:flex items-center space-x-10">
           {navLinks.map((navlink) => (
             <Link key={navlink.id} href={navlink.url}>
-              <p className="nav__link">{navlink.label}</p>
+              <p className="nav__link text-sm">{navlink.label}</p>
             </Link>
           ))}
         </div>
