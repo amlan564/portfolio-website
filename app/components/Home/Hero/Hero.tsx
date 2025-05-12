@@ -1,19 +1,19 @@
-import { baseInfo } from "@/data/data";
+import { baseInfo, socialLinks } from "@/data/data";
 import Image from "next/image";
 import React from "react";
 import { MdDownload } from "react-icons/md";
 
 const Hero = () => {
   return (
-    <div className="w-full pt-[10vh] md:pt-[10vh] lg:pt-[10vh] h-screen bg-gray-100 overflow-hidden relative">
+    <div className="w-full pt-[6vh] md:pt-[10vh] lg:pt-[10vh] h-screen bg-gray-100 overflow-hidden relative">
       <div className="flex flex-col justify-center w-4/7 md:w-3/4 lg:w-5/7 xl:w-4/7 h-full mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
           {/* text content */}
           <div className="flex flex-col items-center md:items-start justify-center gap-2">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-[3.5rem]">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
               Hi, I am {baseInfo.name}
             </h1>
-            <h1 className="text-purple-600 text-xl md:text-2xl font-bold">
+            <h1 className="text-purple-600 text-md md:text-2xl font-bold">
               {baseInfo.position}
             </h1>
             <p className="text-sm md:text-base text-justify mt-2">
@@ -40,6 +40,26 @@ const Hero = () => {
               <MdDownload />
             </button>
           </div>
+        </div>
+      </div>
+      {/* social icons */}
+      <div className="absolute bottom-[30%] right-6 hidden lg:flex">
+        <div className="flex flex-col items-center justify-center gap-4">
+          {socialLinks.map((link) => (
+            <div
+              key={link.id}
+              className="w-10 h-10 rounded-full bg-white hover:bg-purple-600 flex items-center justify-center cursor-pointer group transition-all duration-200"
+            >
+              <a
+                href={link.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 group-hover:text-white "
+              >
+                <link.icon size={24} />
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </div>
