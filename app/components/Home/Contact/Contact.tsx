@@ -6,7 +6,7 @@ import ContactInfo from "./ContactInfo";
 const Contact = () => {
   return (
     <div className="pt-20 bg-gray-100" id="contact">
-      <SectionHeading>Let's Work Together!</SectionHeading>
+      <SectionHeading>Let&apos;s Work Together!</SectionHeading>
       <div className="grid grid-cols-1 xl:grid-cols-2 w-[80%] md:w-[60%] mx-auto items-center gap-14 mt-10">
         {/* Contact form */}
         <div>
