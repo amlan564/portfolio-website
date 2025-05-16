@@ -13,11 +13,11 @@ type Props = {
 
 const Nav = ({ openNav }: Props) => {
   return (
-    <div className="fixed h-[8vh] md:h-[8vh] z-10 w-full bg-gray-50">
-      <div className="flex items-center justify-between h-full w-[90%] md:w-[80%] mx-auto">
+    <div className="fixed h-[8vh] md:h-[8vh] z-10 w-full bg-gray-50/80 backdrop-blur-md">
+      <div className="flex items-center justify-between h-full w-[80%] xl:w-[70%] mx-auto">
         {/* logo */}
         <h1 className="text-purple-600 text-xl uppercase">Amlan</h1>
-        <div className="hidden lg:flex items-center space-x-10">
+        <div className="hidden lg:flex items-center space-x-10 mx-auto">
           {navLinks.map((navlink) => (
             <Link key={navlink.id} href={navlink.url}>
               <p className="nav__link text-sm">{navlink.label}</p>

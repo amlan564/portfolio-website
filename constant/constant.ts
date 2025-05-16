@@ -19,4 +19,9 @@ export const navLinks = [
     url: "#skills",
     label: "Skills",
   },
+  {
+    id: 5,
+    url: "#contact",
+    label: "Contact",
+  },
 ];

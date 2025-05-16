@@ -8,7 +8,7 @@ const About = () => {
     <div className="pt-20 pb-20 bg-gray-50" id="about">
       {/* Section Heading */}
       <SectionHeading>About Me</SectionHeading>
-      <div className="w-[60%] md:w-[80%] lg:w-[80%] xl:w-[60%] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-20 items-center mt-20">
+      <div className="w-[60%] lg:w-[80%] xl:w-[60%] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-20 items-center mt-20">
         {aboutInfo.map((item) => (
           <div
             key={item.id}
