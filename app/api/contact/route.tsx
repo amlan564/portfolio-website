@@ -9,7 +9,7 @@ export async function POST(req: Request) {
     console.log('Received contact form data:', { name, email, message });
 
     return NextResponse.json({ success: true });
-  } catch (err: any) {
+  } catch (err) {
     console.error("Error in API route:", err);
     return NextResponse.json(
       { success: false, error: "Email sending failed" },
