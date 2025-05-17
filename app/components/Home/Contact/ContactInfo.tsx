@@ -1,4 +1,4 @@
-import { contactInfo } from "@/data/data";
+import Link from "next/link";
 import React from "react";
 import { FaPhone } from "react-icons/fa";
 
@@ -6,7 +6,7 @@ const ContactInfo = () => {
   return (
     <div className="flex items-center xl:justify-center">
       <div className="">
-        <a
+        <Link
           href="tel:+8801794599197"
           className="flex items-center space-x-8 mb-8"
         >
@@ -17,8 +17,8 @@ const ContactInfo = () => {
             <h1 className="font-semibold">Phone</h1>
             <p className="text-sm text-gray-600">+8801794599197</p>
           </div>
-        </a>
-        <a
+        </Link>
+        <Link
           href="mailto:amlanckb123@gmail.com"
           className="flex items-center space-x-8 mb-8"
         >
@@ -29,7 +29,7 @@ const ContactInfo = () => {
             <h1 className="font-semibold">Email</h1>
             <p className="text-sm text-gray-600">amlanckb123@gmail.com</p>
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -164,18 +164,3 @@ export const skillsData = [
     icon: "/images/firebase.png",
   },
 ];
-
-export const contactInfo = [
-  {
-    id: 1,
-    icon: FaPhone,
-    title: "Phone",
-    description: "+8801794599197",
-  },
-  {
-    id: 2,
-    icon: MdEmail,
-    title: "Email",
-    description: "amlanckb123@gmail.com"
-  }
-];

@@ -1,5 +1,6 @@
 import { baseInfo, socialLinks } from "@/data/data";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { MdDownload } from "react-icons/md";
 
@@ -19,9 +20,15 @@ const Hero = () => {
             <p className="text-sm md:text-base text-justify mt-2 text-gray-800">
               {baseInfo.description}
             </p>
-            <button className="hidden md:px-6 md:py-2.5 font-semibold text-base transition-all duration-200 rounded-lg mt-5 text-white bg-purple-600 hover:bg-purple-700 md:flex items-center space-x-2 cursor-pointer">
-              <span>Download CV</span>
-              <MdDownload />
+            <button className="hidden font-semibold text-base transition-all duration-200 rounded-lg mt-5 text-white bg-purple-600 hover:bg-purple-700 md:flex cursor-pointer">
+              <Link
+                href="https://drive.google.com/file/d/1psMHeyGAMrfr3-LKykxdm4wNdGBjN16J/view?usp=sharing"
+                target="_blank"
+                className="flex items-center space-x-2 md:px-6 md:py-2.5"
+              >
+                <span>Download CV</span>
+                <MdDownload />
+              </Link>
             </button>
           </div>
           {/* image content */}
@@ -35,9 +42,14 @@ const Hero = () => {
                 className="w-full h-full object-cover object-top"
               />
             </div>
-            <button className="px-6 py-2.5 font-semibold text-sm md:text-base transition-all duration-200 rounded-lg mt-5 text-white bg-purple-600 hover:bg-purple-700 flex items-center space-x-2 cursor-pointer md:hidden">
-              <span>Download CV</span>
-              <MdDownload />
+            <button className="font-semibold text-sm md:text-base transition-all duration-200 rounded-lg mt-5 text-white bg-purple-600 hover:bg-purple-700 cursor-pointer md:hidden">
+              <Link
+                href="https://drive.google.com/file/d/1psMHeyGAMrfr3-LKykxdm4wNdGBjN16J/view?usp=sharing"
+                className="flex items-center space-x-2 px-6 py-2.5"
+              >
+                <span>Download CV</span>
+                <MdDownload />
+              </Link>
             </button>
           </div>
         </div>
