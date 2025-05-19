@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { FaPhone } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const ContactInfo = () => {
   return (
@@ -8,9 +9,9 @@ const ContactInfo = () => {
       <div className="">
         <Link
           href="tel:+8801794599197"
-          className="flex items-center space-x-8 mb-8"
+          className="flex items-center space-x-6 md:space-x-8 mb-8"
         >
-          <div className="w-10 h-10 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-purple-500 to-purple-800 flex flex-col items-center justify-center">
+          <div className="w-10 h-10 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-blue-500 to-blue-800 flex flex-col items-center justify-center">
             <FaPhone className="w-4 h-4 md:w-7 md:h-7 text-white" />
           </div>
           <div>
@@ -20,10 +21,10 @@ const ContactInfo = () => {
         </Link>
         <Link
           href="mailto:amlanckb123@gmail.com"
-          className="flex items-center space-x-8 mb-8"
+          className="flex items-center space-x-6 md:space-x-8 mb-8"
         >
-          <div className="w-10 h-10 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-purple-500 to-purple-800 flex flex-col items-center justify-center">
-            <FaPhone className="w-4 h-4 md:w-7 md:h-7 text-white" />
+          <div className="w-10 h-10 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-blue-500 to-blue-800 flex flex-col items-center justify-center">
+            <MdEmail className="w-4 h-4 md:w-7 md:h-7 text-white" />
           </div>
           <div>
             <h1 className="font-semibold">Email</h1>

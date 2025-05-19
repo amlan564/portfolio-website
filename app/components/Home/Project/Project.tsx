@@ -69,7 +69,7 @@ const Project = () => {
             <div className="flex justify-end p-4">
               <button
                 onClick={handleCloseModal}
-                className="text-red-600 text-4xl font-semibold cursor-pointer"
+                className="text-blue-800 text-4xl font-semibold cursor-pointer"
               >
                 &times;
               </button>
@@ -104,13 +104,13 @@ const Project = () => {
                     href={selectedProject.github}
                     target="_blank"
                     rel="nonopener_nonreferrer"
-                    className="w-1/2 text-center bg-purple-600 text-white font-semibold mt-6 px-2 py-1 lg:px-6 lg:py-2 rounded-md hover:bg-purple-800 transition duration-300"
+                    className="w-1/2 text-center bg-blue-800 text-white font-semibold mt-6 px-2 py-1 lg:px-6 lg:py-2 rounded-md hover:bg-blue-900 transition duration-300"
                   >View Code</a>
                   <a
                     href={selectedProject.live}
                     target="_blank"
                     rel="nonopener_nonreferrer"
-                    className="w-1/2 text-center bg-purple-600 text-white text-base font-semibold mt-6 px-2 py-1 lg:px-6 lg:py-2 rounded-md hover:bg-purple-900 transition duration-300"
+                    className="w-1/2 text-center bg-blue-800 text-white text-base font-semibold mt-6 px-2 py-1 lg:px-6 lg:py-2 rounded-md hover:bg-blue-900 transition duration-300"
                   >View Live</a>
                 </div>
               </div>

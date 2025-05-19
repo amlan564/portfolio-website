@@ -19,7 +19,7 @@ const Skills = () => {
                 className="w-8 h-8"
               />
             </div>
-            <h3 className="text-sm text-gray-600 text-center">{skill.name}</h3>
+            <h3 className="text-sm text-gray-500 text-center">{skill.name}</h3>
           </div>
         ))}
       </div>

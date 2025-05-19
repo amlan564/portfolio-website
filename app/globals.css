@@ -6,7 +6,7 @@
   }
 
   .nav__link::after {
-    @apply block content-[''] absolute h-[3px] bg-purple-500 w-full scale-x-0 transition duration-300 origin-right;
+    @apply block content-[''] absolute h-[3px] bg-blue-800 w-full scale-x-0 transition duration-300 origin-right;
   }
 
   .nav__link:hover::after {

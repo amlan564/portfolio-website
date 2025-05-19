@@ -17,7 +17,7 @@ const Contact = () => {
           <ContactInfo />
         </div>
       </div>
-      <footer className="text-center pt-30 md:pt-50 pb-6 text-xs text-gray-700">
+      <footer className="text-center pt-30 md:pt-50 pb-6 text-xs">
         &copy; 2024 Amlan | All Rights Reserved
       </footer>
     </div>

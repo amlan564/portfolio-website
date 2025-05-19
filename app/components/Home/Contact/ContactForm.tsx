@@ -86,7 +86,7 @@ const ContactForm = () => {
           ></textarea>
           <button
             type="submit"
-            className="px-6 py-2.5 font-semibold text-sm md:text-base transition-all duration-200 rounded-lg mt-4 text-white bg-purple-600 hover:bg-purple-700 flex items-center space-x-2 cursor-pointer"
+            className="px-6 py-2.5 font-semibold text-sm md:text-base transition-all duration-200 rounded-lg mt-4 text-white bg-blue-800 hover:bg-blue-900 flex items-center space-x-2 cursor-pointer"
           >
             <span>Send Message</span>
             <IoIosSend />

@@ -22,10 +22,10 @@ const MobileNav = ({ showNav, closeNav }: Props) => {
       ></div>
       {/* nav menu */}
       <div
-        className={`fixed ${navOpen} transform transition-all duration-500 delay-300 right-0 flex flex-col pt-25 h-full w-[70%] bg-purple-200 z-[10000] space-y-6`}
+        className={`fixed ${navOpen} transform transition-all duration-500 delay-300 right-0 flex flex-col pt-25 h-full w-[70%] bg-gray-200 z-[10000] space-y-6`}
       >
         {navLinks.map((navlink) => (
-          <Link key={navlink.id} href={navlink.url}>
+          <Link key={navlink.id} href={navlink.url} onClick={closeNav}>
             <p className="nav__link text-sm text-black ml-10 pb-2">{navlink.label}</p>
           </Link>
         ))}
@@ -49,7 +49,7 @@ const MobileNav = ({ showNav, closeNav }: Props) => {
         {/* close icon */}
         <CgClose
           onClick={closeNav}
-          className="absolute top-3 right-6 md:top-5 md:right-22 w-6 h-6 cursor-pointer"
+          className="absolute top-4 right-8 md:top-5 md:right-22 w-6 h-6 cursor-pointer text-blue-800"
         />
       </div>
     </div>
