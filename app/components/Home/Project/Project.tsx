@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import SectionHeading from "../Helper/SectionHeading";
 import { projectData } from "@/data/data";
 import { IoEyeSharp } from "react-icons/io5";
@@ -8,16 +8,6 @@ import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 
 const Project = () => {
-  interface ProjectItem {
-    id: number | string;
-    title: string;
-    description: string;
-    image: string;
-    tags: string[];
-    github: string;
-    live: string;
-  }
-
   return (
     <div className="pt-20 pb-20 bg-gray-100" id="projects">
       <SectionHeading>My Projects</SectionHeading>
