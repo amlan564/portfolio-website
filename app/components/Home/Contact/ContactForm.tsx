@@ -57,7 +57,7 @@ const ContactForm = () => {
 
   return (
     <div className="w-full">
-      <Toaster position="top-right" />
+      <Toaster />
       <form onSubmit={handleSubmit} className="mt-8 block w-full">
         <div className="flex flex-col items-start gap-6">
           <input

@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import SectionHeading from "../Helper/SectionHeading";
 import { projectData } from "@/data/data";
+import { IoEyeSharp } from "react-icons/io5";
+import { FaGithub } from "react-icons/fa";
+import Link from "next/link";
 
 const Project = () => {
   interface ProjectItem {
@@ -35,18 +38,37 @@ const Project = () => {
           <div
             key={project.id}
             onClick={() => handleOpenModal(project)}
-            className="h-full bg-white shadow-xl rounded-lg p-5 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
+            className="bg-white shadow-xl rounded-lg p-5 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
           >
             <div className="relative w-full h-60 group rounded-md overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover transition-all duration-300"
+                className="w-full h-full object-cover transition-all duration-600"
               />
-              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 group-hover:bg-black/30 transition-all duration-600">
+                <div className="flex items-center justify-center h-full gap-6">
+                  <Link href={project.live} target="_blank">
+                    <div className="w-12 h-12 flex items-center justify-center rounded-full group-hover:bg-black/60 hover:scale-90 transition-all duration-600">
+                      <IoEyeSharp
+                        className="text-white opacity-0 group-hover:opacity-100"
+                        size={20}
+                      />
+                    </div>
+                  </Link>
+                  <Link href={project.github} target="_blank">
+                    <div className="w-12 h-12 flex items-center justify-center rounded-full group-hover:bg-black/60 hover:scale-90 transition-all duration-600">
+                      <FaGithub
+                        className="text-white opacity-0 group-hover:opacity-100"
+                        size={20}
+                      />
+                    </div>
+                  </Link>
+                </div>
+              </div>
             </div>
             <h2 className="text-lg font-semibold mt-6">{project.title}</h2>
-            <p className="text-gray-500 text-sm mt-2 mb-6 line-clamp-3">
+            <p className="text-gray-500 text-sm mt-2 mb-6">
               {project.description}
             </p>
             <div className="mb-4">
@@ -62,62 +84,6 @@ const Project = () => {
           </div>
         ))}
       </div>
-      {/* Modal Container */}
-      {selectedProject && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="bg-white shadow-lg rounded-lg w-[80%] md:w-[60%] lg:w-[40%]">
-            <div className="flex justify-end p-4">
-              <button
-                onClick={handleCloseModal}
-                className="text-blue-800 text-4xl font-semibold cursor-pointer"
-              >
-                &times;
-              </button>
-            </div>
-            <div className="flex flex-col">
-              <div className="w-full flex justify-center px-4">
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="w-[95%] object-cover rounded-lg"
-                />
-              </div>
-              <div className="p-6 md:p-8">
-                <h2 className="text-lg font-semibold">
-                  {selectedProject.title}
-                </h2>
-                <p className="text-gray-500 text-sm mt-2 mb-6">
-                  {selectedProject.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {selectedProject.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="bg-gray-600 text-xs font-semibold text-white rounded-full px-2 py-1"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex items-center gap-2 md:gap-6">
-                  <a
-                    href={selectedProject.github}
-                    target="_blank"
-                    rel="nonopener_nonreferrer"
-                    className="w-1/2 text-center bg-blue-800 text-white font-semibold mt-6 px-2 py-1 lg:px-6 lg:py-2 rounded-md hover:bg-blue-900 transition duration-300"
-                  >View Code</a>
-                  <a
-                    href={selectedProject.live}
-                    target="_blank"
-                    rel="nonopener_nonreferrer"
-                    className="w-1/2 text-center bg-blue-800 text-white text-base font-semibold mt-6 px-2 py-1 lg:px-6 lg:py-2 rounded-md hover:bg-blue-900 transition duration-300"
-                  >View Live</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
