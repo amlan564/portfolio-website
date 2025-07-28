@@ -1,6 +1,7 @@
 import React from "react";
 import SectionHeading from "../Helper/SectionHeading";
 import { skillsData } from "@/data/data";
+import Image from "next/image";
 
 const Skills = () => {
   return (
@@ -13,10 +14,11 @@ const Skills = () => {
             className="flex flex-col items-center justify-center p-4"
           >
             <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full">
-              <img
+              <Image
                 src={skill.icon}
                 alt={skill.name}
-                className="w-8 h-8"
+                width={30}
+                height={30}
               />
             </div>
             <h3 className="text-sm text-gray-500 text-center">{skill.name}</h3>

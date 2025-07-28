@@ -18,18 +18,6 @@ const Project = () => {
     live: string;
   }
 
-  const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(
-    null
-  );
-
-  const handleOpenModal = (project: ProjectItem) => {
-    setSelectedProject(project);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedProject(null);
-  };
-
   return (
     <div className="pt-20 pb-20 bg-gray-100" id="projects">
       <SectionHeading>My Projects</SectionHeading>
@@ -37,7 +25,6 @@ const Project = () => {
         {projectData.map((project) => (
           <div
             key={project.id}
-            onClick={() => handleOpenModal(project)}
             className="bg-white shadow-xl rounded-lg p-5 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
           >
             <div className="relative w-full h-60 group rounded-md overflow-hidden">
