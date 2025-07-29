@@ -22,7 +22,7 @@ const Hero = () => {
             </p>
             <button className="hidden font-semibold text-base transition-all duration-200 rounded-lg mt-10 text-white bg-blue-800 hover:bg-blue-900 md:flex cursor-pointer">
               <Link
-                href="https://drive.google.com/file/d/17Cb5pV1xMsmlaHdqH47SSANKtKCTESBX/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1YFywLLSjNcm3_qUNKordaA5YR_q_ksyN/view?usp=sharing"
                 target="_blank"
                 className="flex items-center space-x-2 md:px-6 md:py-2.5"
               >
