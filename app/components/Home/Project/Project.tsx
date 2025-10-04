@@ -6,10 +6,17 @@ import { projectData } from "@/data/data";
 import { IoEyeSharp } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 const Project = () => {
   return (
-    <div className="pt-20 pb-20 bg-gray-100" id="projects">
+    <motion.div
+      className="pt-20 pb-20 bg-gray-100"
+      id="projects"
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.4 }}
+    >
       <SectionHeading>My Projects</SectionHeading>
       <div className="w-[80%] xl:w-[70%] mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-center">
         {projectData.map((project) => (
@@ -61,7 +68,7 @@ const Project = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

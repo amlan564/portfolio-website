@@ -1,11 +1,19 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { motion } from "motion/react";
 
 const ContactInfo = () => {
   return (
-    <div className="flex items-center xl:justify-center">
+    <motion.div
+      className="flex items-center xl:justify-center"
+      initial={{ x: 100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.4 }}
+    >
       <div className="">
         <Link
           href="tel:+8801794599197"
@@ -32,7 +40,7 @@ const ContactInfo = () => {
           </div>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

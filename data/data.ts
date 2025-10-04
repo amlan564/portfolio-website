@@ -57,6 +57,25 @@ export const projectCategories = [
 export const projectData = [
   {
     id: 1,
+    title: "E-commerce website - UltraGadgets",
+    description:
+      "This is a full-stack e-commerce web application built using the MERN stack with modern UI components from Shadcn UI and Tailwind CSS. It enables users to browse gadgets, add products to their cart, and securely place orders with integrated Stripe payment processing. The website includes user authentication (JWT & bcrypt), product management, image uploads via Cloudinary, and a responsive interface powered by Redux Toolkit for state management.",
+    image: "/images/ultra-gadgets.png",
+    tags: [
+      "React",
+      "Shadcn UI",
+      "TailwindCSS",
+      "Redux Toolkit",
+      "Express",
+      "MongoDB",
+      "Stripe",
+      "Cloudinary",
+    ],
+    github: "https://github.com/amlan564/e-commerce-mern",
+    live: "https://ultra-gadgets.vercel.app",
+  },
+  {
+    id: 2,
     title: "Chat App - HelloChat",
     description:
       "This is a full-stack real-time chat application built using the MERN stack and Socket.io for seamless bi-directional communication. It allows users to register, log in, and exchange instant messages in real time within a clean, responsive UI. The app focuses on real-time messaging, user experience, and secure authentication.",
@@ -74,7 +93,7 @@ export const projectData = [
     live: "https://hello-chat-one.vercel.app",
   },
   {
-    id: 2,
+    id: 3,
     title: "Blog Website - ThinkDrop",
     description:
       "This is a full-featured blog website developed using the MERN stack. The platform allows users to create, read, update, and delete (CRUD) blog posts with secure authentication and a user-friendly interface. It offers a modern, responsive design, rich text editing, and AI-powered blog creation using Google Gemini API.",
@@ -92,7 +111,7 @@ export const projectData = [
     live: "https://think-drop-ivory.vercel.app",
   },
   {
-    id: 3,
+    id: 4,
     title: "Book Rental",
     description:
       "A website built with ASP.NET allows user to log in as either admin or user. Once logged in as a user, individuals can search for books and request to rent them for either one month or six months. Admin, upon logging in, can add or manage book details, as well as view rental status to approve user requests.",
@@ -102,7 +121,7 @@ export const projectData = [
     live: "https://github.com/amlan564/Book-Rental",
   },
   {
-    id: 4,
+    id: 5,
     title: "AUST Learning Management",
     description:
       "An Android application based on our university that allows admin to add and manage teacher information. Teachers can post course materials, video lectures, assignments and class announcements. Students can search for course materials and video lectures to see and download.",
@@ -112,7 +131,7 @@ export const projectData = [
     live: "https://github.com/amlan564/AUST-Learning-Management",
   },
   {
-    id: 5,
+    id: 6,
     title: "Hotel Management System",
     description:
       "A Java based desktop application that allows you to log in as an admin or receptionist. As an admin, you can create and manage rooms, employees and drivers. As a receptionist, you can add new clients, access room information, all employee information, client information, manager information, manage client pickup service, search for available rooms, update room status and check out clients.",

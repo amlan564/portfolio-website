@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { IoIosSend } from "react-icons/io";
 import toast, { Toaster } from "react-hot-toast";
+import { motion } from "motion/react";
 
 type FormState = {
   name: string;
@@ -56,7 +57,12 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-full">
+    <motion.div
+      className="w-full"
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.4 }}
+    >
       <Toaster />
       <form onSubmit={handleSubmit} className="mt-8 block w-full">
         <div className="flex flex-col items-start gap-6">
@@ -93,7 +99,7 @@ const ContactForm = () => {
           </button>
         </div>
       </form>
-    </div>
+    </motion.div>
   );
 };
 
