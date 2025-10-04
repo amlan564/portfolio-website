@@ -13,3 +13,7 @@
     @apply scale-x-100 origin-right;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}

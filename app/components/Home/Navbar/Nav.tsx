@@ -13,7 +13,7 @@ type Props = {
 
 const Nav = ({ openNav }: Props) => {
   return (
-    <div className="fixed h-[8vh] md:h-[8vh] z-10 w-full bg-gray-50/80 backdrop-blur-md">
+    <div className="fixed h-[8vh] z-10 w-full bg-gray-50/80 backdrop-blur-md">
       <div className="flex items-center justify-between h-full w-[80%] xl:w-[70%] mx-auto">
         {/* logo */}
         <h1 className="text-xl uppercase bg-gradient-to-r from-blue-400 to-blue-800 bg-clip-text text-transparent">Amlan</h1>

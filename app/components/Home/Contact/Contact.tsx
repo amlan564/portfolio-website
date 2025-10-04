@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import SectionHeading from "../Helper/SectionHeading";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
+import { motion } from "motion/react";
 
 const Contact = () => {
   return (
