@@ -30,7 +30,7 @@ const Hero = () => {
             </p>
             <button className="hidden font-semibold text-base transition-all duration-200 rounded-lg mt-10 text-white bg-blue-800 hover:bg-blue-900 md:flex cursor-pointer">
               <Link
-                href="https://drive.google.com/file/d/1eZwQlt50-d8bXEq-eX8Q3NV4XHME_lFi/view?usp=sharing"
+                href="https://drive.google.com/file/d/1Ol5O1YwbEWash4-BYaPY377qexVPu5G1/view?usp=sharing"
                 target="_blank"
                 className="flex items-center space-x-2 md:px-6 md:py-2.5"
               >
@@ -57,7 +57,7 @@ const Hero = () => {
             </div>
             <button className="font-semibold text-sm md:text-base transition-all duration-200 rounded-lg mt-10 text-white bg-blue-800 hover:bg-blue-900 cursor-pointer md:hidden">
               <Link
-                href="https://drive.google.com/file/d/1eZwQlt50-d8bXEq-eX8Q3NV4XHME_lFi/view?usp=sharing"
+                href="https://drive.google.com/file/d/1Ol5O1YwbEWash4-BYaPY377qexVPu5G1/view?usp=sharing"
                 target="_blank"
                 className="flex items-center space-x-2 px-6 py-2.5"
               >
